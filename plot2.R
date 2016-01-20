@@ -20,11 +20,11 @@ for(col in numerical_cols){
         tempdata[,col] <- as.numeric(tempdata[,col])
 }
 
+png(filename = "plot2.png")
 plot(x = tempdata$Time,
      y = tempdata$Global_active_power,
      type = "l",
      xlab = "",
      ylab = "Global Active Power (kilowatts)")
 
-dev.copy(png, "plot2.png")
 dev.off()

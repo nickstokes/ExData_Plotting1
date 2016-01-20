@@ -16,10 +16,10 @@ for(col in numerical_cols){
         tempdata[,col] <- as.numeric(tempdata[,col])
 }
 
+png(filename = "plot1.png")
 hist(tempdata$Global_active_power, 
      col = "red", 
      xlab = "Global Active Power (kilowatts)",
      main = "Global Active Power")
 
-dev.copy(png, "plot1.png")
 dev.off()
